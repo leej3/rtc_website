@@ -23,6 +23,8 @@ LINKS = (
     ("You can modify those links in your config file", "#"),
 )
 
+THEME = "themes/bootstrap-5"
+
 # Social widget
 SOCIAL = (
     ("You can add links in your config file", "#"),
