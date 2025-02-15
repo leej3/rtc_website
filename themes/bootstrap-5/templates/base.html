@@ -52,7 +52,7 @@
         justify-content: center;
         margin-top: 1rem;
       }
-      
+
       .navbar-brand {
         margin: 0 auto;
       }
@@ -70,20 +70,21 @@
     }
 
     .main-logo {
-        max-width: 400px;
-        width: 100%;
-        height: auto;
-        margin: 20px auto;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      margin: 20px auto;
     }
 
     @media (max-width: 768px) {
-        .main-logo {
-            max-width: 300px;
-        }
+      .main-logo {
+        max-width: 300px;
+      }
     }
 
     .navbar {
       padding: 0.5rem 1rem;
+      background-color: rgb(65, 63, 109);
     }
 
     .navbar-brand {
@@ -106,6 +107,7 @@
       .nav-link {
         padding-right: 1rem;
         padding-left: 1rem;
+        color: #ffffff !important;
       }
     }
   </style>
@@ -125,23 +127,36 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    <nav class="navbar navbar-expand-md shadow-sm">
       <div class="container d-flex justify-content-start">
         <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a href="{{ SITEURL }}" class="navbar-brand d-flex align-items-center">
-          <img src="{{ SITEURL }}/theme/images/snakebrain.svg" width="60" height="48" class="bi me-2"
-            alt="Snake Brain Logo">
+          <h1 id="sp-njz1f5" class="sp-css-target sp-el-block sp-headline-block-njz1f5 sp-type-header"
+            style="font-size: 25px;color: rgb(255, 255, 255);text-align: left;padding: 3px;margin: 18px 0px 0px;">
+            Rockfield Tennis Club
+          </h1>
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a href="{{ SITEURL }}" class="nav-link {% if output_file == 'index.html' %}active{% endif %}">Home</a></li>
-            <li class="nav-item"><a href="{{ SITEURL }}/services" class="nav-link {% if output_file == 'services.html' %}active{% endif %}">Services</a></li>
-            <li class="nav-item"><a href="{{ SITEURL }}/experience-expertise" class="nav-link {% if output_file == 'experience-expertise.html' %}active{% endif %}">Experience & Expertise</a></li>
-            <li class="nav-item"><a href="{{ SITEURL }}/our-mission" class="nav-link {% if output_file == 'our-mission.html' %}active{% endif %}">Our Mission</a></li>
-            <li class="nav-item"><a href="{{ SITEURL }}/contact-us" class="nav-link {% if output_file == 'contact-us.html' %}active{% endif %}">Contact us</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}"
+                class="nav-link {% if output_file == 'index.html' %}active{% endif %}">Home</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/public-play"
+                class="nav-link {% if output_file == 'public-play.html' %}active{% endif %}">Public Play</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/coaching"
+                class="nav-link {% if output_file == 'coaching.html' %}active{% endif %}">Coaching</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/members"
+                class="nav-link {% if output_file == 'members.html' %}active{% endif %}">Members</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/join"
+                class="nav-link {% if output_file == 'join.html' %}active{% endif %}">Join</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/policies"
+                class="nav-link {% if output_file == 'policies.html' %}active{% endif %}">Policies</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/shop"
+                class="nav-link {% if output_file == 'shop.html' %}active{% endif %}">Shop</a></li>
+            <li class="nav-item"><a href="{{ SITEURL }}/about"
+                class="nav-link {% if output_file == 'about.html' %}active{% endif %}">About</a></li>
           </ul>
         </div>
       </div>
@@ -174,7 +189,7 @@
     const year = new Date().getFullYear();
     // Set the current year in the span with id 'currentYear'
     document.getElementById('currentYear').textContent = year;
-</script>
+  </script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
