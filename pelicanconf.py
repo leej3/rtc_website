@@ -34,7 +34,7 @@ MARKDOWN = {
 
 
 # Activate the plugin
-PLUGINS = ['plugins.timer', 'plugins.generate-services']
+PLUGINS = []
 SITEURL = 'http://localhost:8000'
 
 # Add EXTRA_PATH_METADATA to ensure favicon.ico is copied to the root
