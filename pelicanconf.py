@@ -25,13 +25,23 @@ LINKS = (
 
 THEME = "themes/bootstrap-5"
 
-# Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
+STATIC_PATHS = ['images', 'static']
 
-DEFAULT_PAGINATION = False
+MARKDOWN = {
+    'extensions': ['extra', 'codehilite', 'toc'],
+    'output_format': 'html5',
+}
+
+
+# Activate the plugin
+PLUGINS = ['plugins.timer', 'plugins.generate-services']
+SITEURL = 'http://localhost:8000'
+
+# Add EXTRA_PATH_METADATA to ensure favicon.ico is copied to the root
+EXTRA_PATH_METADATA = {
+    'static/favicon.ico': {'path': 'favicon.ico'}
+}
+
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
