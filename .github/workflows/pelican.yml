@@ -24,7 +24,8 @@ jobs:
           pip install linkchecker
 
       - name: Build site
-        run: pelican content -o output -s publishconf.py
+        run: |
+          pelican content -o output -s publishconf.py
 
       - name: Run link checker
         run: |
