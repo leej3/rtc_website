@@ -63,8 +63,28 @@ def parse_memberships(membership_list):
 
     return memberships
 
+def parse_programs(program_list):
+    programs = []
+    current_program = {}
+
+    for item in program_list:
+        if item.startswith('- name:'):
+            if current_program:
+                programs.append(current_program)
+            current_program = {'name': item.split(': ', 1)[1]}
+        elif item.startswith('description:'):
+            current_program['description'] = item.split(': ', 1)[1]
+        elif item.startswith('image:'):
+            current_program['image'] = item.split(': ', 1)[1]
+
+    if current_program:
+        programs.append(current_program)
+
+    return programs
+
 JINJA_FILTERS = {
     'parse_memberships': parse_memberships,
+    'parse_programs': parse_programs,
 }
 
 

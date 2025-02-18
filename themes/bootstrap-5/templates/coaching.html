@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Join as a Member{% endblock title %}
+
+{% block content %}
+
+<article class="blog-post" style="text-align: center;">
+    <br />
+    {% set programs = article.metadata['programs'] | parse_programs %}
+    {% for program in programs %}
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    {{ program.description }}
+                </p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <img src="{{ SITEURL }}/theme/images/{{ program.image }}" alt="{{ program.name }}" style="max-width: 100%; height: auto;">
+        <br />
+        <br />
+        {% if loop.index < programs | length %}
+            <hr/>
+        {% endif %}
+
+    {% endfor %}
+
+</article>
+
+
+{% endblock content %}
