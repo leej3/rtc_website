@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Join as a Member{% endblock title %}
+
+{% block content %}
+
+<article class="blog-post" style="text-align: center;">
+    <h3 class="blog-post-title">Membership</h3>
+    <br />
+    <p class="text-justify">
+        Becoming a member of Rockfield Tennis Club offers numerous benefits, including unlimited play, access to club
+        events, and eligibility for group lessons. We offer various membership categories to suit different needs:
+    </p>
+    <br />
+    {% set memberships = article.metadata['memberships'] | parse_memberships %}
+    {% for membership in memberships %}
+        <div class="row">
+            <div class="col-md-5">
+                <h4>{{ membership.name }} € {{ membership.price }}</h4>
+                <p>
+                    {{ membership.description }}
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <img src="{{ SITEURL }}/theme/images/{{ membership.image }}" alt="{{ membership.name }}" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <br />
+    {% endfor %}
+
+    <p class="text-justify">
+        For any queries, please contact our Membership Officer, Gemma Good, at 087 125 1946.
+        <br />
+        To join, please complete and submit the membership form:
+        <br />
+        <br />
+        <a href="https://ebookingonline.net/box/signup.php?id=391" target="_blank" rel="noopener">Membership Form</a>
+    </p>
+</article>
+
+
+{% endblock content %}
